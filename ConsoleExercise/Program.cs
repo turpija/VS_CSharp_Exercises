@@ -11,14 +11,27 @@ namespace ConsoleExercise
     {
         static void Main(string[] args)
         {
-            void SayHello()
+            void SayHello(string imeValue)
             {
-                Console.Write("Upiši svoje ime: ");
-                string ime = Console.ReadLine();
-                Console.WriteLine($"Dobrodošao, {ime}!");
+                Console.WriteLine($"Dobrodošao, {imeValue}!");
             }
 
-            SayHello();
+            void SayHelloVertically(string imeValue)
+            {
+                Console.WriteLine("Dobrodošao:");
+                for (int i = 0; i < imeValue.Length; i++)
+                {
+                Console.WriteLine($" {imeValue[i]}");
+                }
+            }
+
+
+            Console.Write("Upiši svoje ime: ");
+            string ime = Console.ReadLine();
+
+            //SayHello(ime);
+            SayHelloVertically(ime);
+
             Console.ReadLine();
         }
     }
