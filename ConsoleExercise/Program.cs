@@ -78,11 +78,31 @@ namespace ConsoleExercise
                 }
             }
 
-            //SayHello();
-            //SayHelloVertically();
-            //CalculateCircleArea();
-            //SumArray();
-            BeautifyString();
+            void Selector()
+            {
+                Console.WriteLine("the SELECTOR 9000");
+                Console.WriteLine("1 - SayHello");
+                Console.WriteLine("2 - SayHelloVertical");
+                Console.WriteLine("3 - CalculateCircleArea");
+                Console.WriteLine("4 - SumArray");
+                Console.WriteLine("5 - BeautifyString");
+                Console.Write("Type number of choice you with to make:");
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1": SayHello(); break;
+                    case "2": SayHelloVertically(); break;
+                    case "3": CalculateCircleArea(); break;
+                    case "4": SumArray(); break;
+                    case "5": BeautifyString(); break;
+                    default:
+                        Console.WriteLine("error...");
+                        break;
+                }
+            }
+
+            Selector();
 
             Console.ReadLine();
         }
