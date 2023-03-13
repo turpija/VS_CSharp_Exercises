@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -43,11 +44,33 @@ namespace ConsoleExercise
                 }
             }
 
+           void SumArray()
+            {
+                Console.Write("upiši niz brojeva: ");
+                string input = Console.ReadLine();
+                //string input = "324 4578:6745,23 a bb 2";
+                double sum = 0;
+                char[] divider = { ' ', ',', ':',';', '\t' }; 
 
-            
+                string[] inputArray = input.Split(divider);
+
+                foreach (var str in inputArray)
+                {
+                    double num;
+                    if (double.TryParse(str, out num))
+                    {
+                        sum += num;
+                    }
+                }
+                Console.WriteLine($"Zbroj svih brojeva u nizu = {sum}"); //11672
+
+            }
+
+
             //SayHello(ime);
             //SayHelloVertically(ime);
-            CalculateCircleArea();
+            //CalculateCircleArea();
+            SumArray();
 
             Console.ReadLine();
         }
