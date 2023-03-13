@@ -11,26 +11,43 @@ namespace ConsoleExercise
     {
         static void Main(string[] args)
         {
-            void SayHello(string imeValue)
+            void SayHello()
             {
-                Console.WriteLine($"Dobrodošao, {imeValue}!");
+                Console.Write("Upiši svoje ime: ");
+                string ime = Console.ReadLine();
+
+                Console.WriteLine($"Dobrodošao, {ime}!");
             }
 
-            void SayHelloVertically(string imeValue)
+            void SayHelloVertically()
             {
+                Console.Write("Upiši svoje ime: ");
+            string ime = Console.ReadLine();
+
                 Console.WriteLine("Dobrodošao:");
-                for (int i = 0; i < imeValue.Length; i++)
+                for (int i = 0; i < ime.Length; i++)
                 {
-                Console.WriteLine($" {imeValue[i]}");
+                Console.WriteLine($" {ime[i]}");
+                }
+            }
+
+            void CalculateCircleArea()
+            {
+                Console.WriteLine("Izračunaj površinu kružnice");
+                Console.Write("Upiši polumjer: ");
+                string radiusStr = Console.ReadLine();
+                double radius;
+                if(double.TryParse(radiusStr, out radius))
+                {
+                Console.Write($"Površina kružnice (čiji je polumjer = {radius}) jest = {Math.PI * Math.Pow(radius, 2)}");
                 }
             }
 
 
-            Console.Write("Upiši svoje ime: ");
-            string ime = Console.ReadLine();
-
+            
             //SayHello(ime);
-            SayHelloVertically(ime);
+            //SayHelloVertically(ime);
+            CalculateCircleArea();
 
             Console.ReadLine();
         }
