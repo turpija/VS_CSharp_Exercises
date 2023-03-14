@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Dynamic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -90,6 +91,23 @@ namespace ConsoleExercise
                 EndProgram();
             }
 
+            void GetCurrentTime()
+            {
+                StartProgram();
+                //var currTime = DateTime.Now.TimeOfDay.Milliseconds;
+                var currTime = DateTime.Now.TimeOfDay;
+                Console.WriteLine("The time is: " + currTime);
+                EndProgram();
+            }
+
+            void Random()
+            {
+                StartProgram();
+                var randNum = new Program().Randomizer();
+                Console.WriteLine("more randomness: " + randNum);
+                EndProgram();
+            }
+
             void StartProgram()
             {
                 Console.Clear();
@@ -107,6 +125,7 @@ namespace ConsoleExercise
             {
                 Console.Clear();
                 ConsoleKeyInfo keyPress;
+
                 do
                 {
                     Console.WriteLine("--== the SELECTOR 9000 ==--");
@@ -117,6 +136,9 @@ namespace ConsoleExercise
                     Console.WriteLine("(3) CalculateCircleArea");
                     Console.WriteLine("(4) SumArray");
                     Console.WriteLine("(5) BeautifyString");
+                    //Console.WriteLine("(6) What it the time now ?");
+                    Console.WriteLine("(6) randomness ?");
+
                     Console.WriteLine();
                     Console.Write("Type number of choice you wish to make (Esc to exit):");
                     keyPress = Console.ReadKey();
@@ -128,6 +150,8 @@ namespace ConsoleExercise
                         case "D3": CalculateCircleArea(); break;
                         case "D4": SumArray(); break;
                         case "D5": BeautifyString(); break;
+                        case "D6": Random(); break;
+                        case "D7":; break;
                         default:
                             break;
                     }
@@ -137,7 +161,18 @@ namespace ConsoleExercise
             Selector();
 
 
-            //Console.ReadLine();
         }
+
+        private double Randomizer()
+        {
+            // get current time of current day in miliseconds 
+            var currTime = (double)DateTime.Now.TimeOfDay.Milliseconds;
+            // multiply with random function
+            var randomNum = new Random().NextDouble();
+            // return result
+            return (currTime/1000) * randomNum ;
+        }
+
     }
+
 }
