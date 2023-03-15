@@ -10,44 +10,28 @@ namespace OOPbasics
     {
         static void Main(string[] args)
         {
-            void MainMenu()
+
+
+            bool datumOk = false;
+            do
             {
-                Console.Clear();
-
-                ConsoleKeyInfo keyPress;
-                List<Person> popis = new List<Person>();
-
-                do
+                DateTime datum;
+                string input = Console.ReadLine();
+                try
                 {
-                    Console.Write("Upiši ime osobe: ");
-                    string ime = Console.ReadLine();
-
-                    Console.Write("upiši datum rođenja (godina,mjesec,dan): ");
-                    DateTime datum = DateTime.Parse(Console.ReadLine());
-
-                    //Console.WriteLine("datum"+datum);
-                    popis.Add(new Person(ime, datum));
-
-                    Console.WriteLine("\n<Enter> to continue, <Escape> to exit");
-                    keyPress = Console.ReadKey();
-
-                } while (keyPress.Key != ConsoleKey.Escape);
-
-                Console.Clear();
-
-                foreach (Person osoba in popis)
-                {
-                    Console.WriteLine("Ime osobe: {0}, godina: {1}", osoba.Name, osoba.Age);
+                    datum = DateTime.Parse(input);
+                    Console.WriteLine(datum);
+                    datumOk = true;
                 }
-                Console.ReadLine();
-            }
+                catch (Exception)
+                {
+                    Console.WriteLine("ne va lja");
+                }
+
+            } while (!datumOk);
 
 
 
-            MainMenu();
-
-            //Person darko = new Person("Darko", new DateTime(1983, 1, 1));
-            //Console.WriteLine($"Ime:{darko.Name}, Godina:{darko.Age}");
 
 
         }

@@ -129,20 +129,21 @@ namespace ConsoleExercise
 
                 do
                 {
-                    Console.WriteLine("--== the SELECTOR 9000 ==--");
-                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("===========================");
+                    Console.WriteLine("     the SELECTOR 9000     ");
+                    Console.WriteLine("===========================");
                     Console.WriteLine();
-                    Console.WriteLine("(1) SayHello");
-                    Console.WriteLine("(2) SayHelloVertical");
-                    Console.WriteLine("(3) CalculateCircleArea");
-                    Console.WriteLine("(4) SumArray");
-                    Console.WriteLine("(5) BeautifyString");
-                    Console.WriteLine("(6) randomness ?");
-                    Console.WriteLine("(7) upisi osobe ?");
+                    Console.WriteLine("<1> SayHello");
+                    Console.WriteLine("<2> SayHelloVertical");
+                    Console.WriteLine("<3> CalculateCircleArea");
+                    Console.WriteLine("<4> SumArray");
+                    Console.WriteLine("<5> BeautifyString");
+                    Console.WriteLine("<6> randomness ?");
+                    Console.WriteLine("<7> upisi osobe ?");
 
 
                     Console.WriteLine();
-                    Console.Write("Type number of choice you wish to make (Esc to exit):");
+                    Console.Write("Type number of choice you wish to make (<Esc> to exit):");
                     keyPress = Console.ReadKey();
 
                     switch (keyPress.Key.ToString())
