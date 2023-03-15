@@ -158,8 +158,23 @@ namespace ConsoleExercise
                 } while (keyPress.Key != ConsoleKey.Escape);
             }
 
-            Selector();
+            //Selector();
+            Console.WriteLine(Exercise());
 
+            bool Exercise()
+            {
+                var flower1 = 1;
+                var flower2 = 4;
+                if (flower1 % 2 == 0)
+                {
+                    if (flower2 % 1 == 1) return true;
+                }
+                else
+                {
+                    if (flower2 % 2 == 0) return true;
+                }
+                return false;
+            }
 
         }
 
@@ -170,7 +185,7 @@ namespace ConsoleExercise
             // multiply with random function
             var randomNum = new Random().NextDouble();
             // return result
-            return (currTime/1000) * randomNum ;
+            return (currTime / 1000) * randomNum;
         }
 
     }
