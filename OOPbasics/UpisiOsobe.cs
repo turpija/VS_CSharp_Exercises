@@ -39,7 +39,7 @@ namespace OOPbasics
             Console.WriteLine("-------------");
             foreach (Person osoba in popis)
             {
-                Console.WriteLine("{0} ima {1} godina", osoba.Name, osoba.Age);
+                Console.WriteLine("{0} ima {1} godina", osoba.Name, osoba.CurrentAge);
             }
             Console.ReadLine();
         }

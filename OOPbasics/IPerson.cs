@@ -8,9 +8,9 @@ namespace OOPbasics
 {
     internal interface IPerson
     {
-        string Name { get; set; }
-        DateTime Birthdate { get; set; }
-        int Age { get; set; }
+        string Name { get; }
+        DateTime Birthdate { get; }
+        int CurrentAge { get; }
 
     }
 }
