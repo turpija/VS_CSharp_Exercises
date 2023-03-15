@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOPbasics
 {
-    internal class Program
+    public class UpisiOsobe
     {
-        static void Main(string[] args)
-        {
-            void MainMenu()
+        public void MainMenu()
             {
                 Console.Clear();
 
@@ -41,15 +39,5 @@ namespace OOPbasics
                 }
                 Console.ReadLine();
             }
-
-
-
-            MainMenu();
-
-            //Person darko = new Person("Darko", new DateTime(1983, 1, 1));
-            //Console.WriteLine($"Ime:{darko.Name}, Godina:{darko.Age}");
-
-
-        }
     }
 }

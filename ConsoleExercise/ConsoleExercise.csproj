@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OOPbasics\OOPbasics.csproj">
+      <Project>{40d53afd-3f67-4d4f-bdd7-9cfde62ae360}</Project>
+      <Name>OOPbasics</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

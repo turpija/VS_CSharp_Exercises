@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using OOPbasics;
 
 namespace ConsoleExercise
 {
@@ -136,8 +137,9 @@ namespace ConsoleExercise
                     Console.WriteLine("(3) CalculateCircleArea");
                     Console.WriteLine("(4) SumArray");
                     Console.WriteLine("(5) BeautifyString");
-                    //Console.WriteLine("(6) What it the time now ?");
                     Console.WriteLine("(6) randomness ?");
+                    Console.WriteLine("(7) upisi osobe ?");
+
 
                     Console.WriteLine();
                     Console.Write("Type number of choice you wish to make (Esc to exit):");
@@ -151,30 +153,15 @@ namespace ConsoleExercise
                         case "D4": SumArray(); break;
                         case "D5": BeautifyString(); break;
                         case "D6": Random(); break;
-                        case "D7":; break;
+                        case "D7": new UpisiOsobe().MainMenu(); break;
                         default:
                             break;
                     }
                 } while (keyPress.Key != ConsoleKey.Escape);
             }
 
-            //Selector();
-            Console.WriteLine(Exercise());
+            Selector();
 
-            bool Exercise()
-            {
-                var flower1 = 1;
-                var flower2 = 4;
-                if (flower1 % 2 == 0)
-                {
-                    if (flower2 % 1 == 1) return true;
-                }
-                else
-                {
-                    if (flower2 % 2 == 0) return true;
-                }
-                return false;
-            }
 
         }
 
