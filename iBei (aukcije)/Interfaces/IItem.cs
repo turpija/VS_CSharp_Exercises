@@ -9,7 +9,7 @@ namespace iBei.Interfaces
 {
     internal interface IItem
     {
-        Guid Id { get; }
+        Guid Id { get; set; }
         string Name { get; set; }
         string Description { get; set; }
         Guid CategoryId { get; set; }

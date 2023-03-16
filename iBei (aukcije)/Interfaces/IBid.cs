@@ -8,11 +8,11 @@ namespace iBei.Interfaces
 {
     internal interface IBid
     {
-        Guid Id { get; }
+        Guid Id { get; set; }
         Guid UserId { get; set; }
         IUser User { get; set; }
         Guid AuctionId { get; set; }
-        IAuction Auction { get; }
+        IAuction Auction { get; set; }
         double BidPrice { get; set; }
         DateTime BidTime { get; set; }
     }

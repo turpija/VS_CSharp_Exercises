@@ -11,13 +11,13 @@ namespace iBei.Model
 {
     internal class Category : ICategory
     {
-        public Guid Id { get; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public Guid SectionId { get; set; }
         public ISection Section { get; set; }
         public ICollection<IItem> Items { get; set; }
 
-        public Category(string name, Section section)
+        public Category(string name, ISection section)
         {
             Name = name;
             Section = section;

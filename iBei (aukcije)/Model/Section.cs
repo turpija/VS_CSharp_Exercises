@@ -10,7 +10,7 @@ namespace iBei.Model
 {
     internal class Section : ISection
     {
-        public Guid Id { get; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public ICollection<ICategory> Categories { get; set; }
 

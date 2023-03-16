@@ -9,19 +9,23 @@ namespace iBei.Model
 {
     internal class Bid : IBid
     {
-        public Guid Id { get; }
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public IUser User { get; }
+        public IUser User { get; set; }
         public Guid AuctionId { get; set; }
-        public IAuction Auction { get; }
+        public IAuction Auction { get; set; }
         public double BidPrice { get; set; }
         public DateTime BidTime { get; set; }
 
-        public Bid(User user, Auction auction)
+        public Bid(Auction auction, User user, Double price)
         {
-            User = user;
-            Auction = auction;
             Id = Guid.NewGuid();
+            Auction = auction;
+            AuctionId = auction.Id;
+            User = user;
+            UserId = user.Id;
+            BidPrice = price;
+            BidTime = DateTime.Now;
         }
     }
 }

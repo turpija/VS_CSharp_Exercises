@@ -8,7 +8,7 @@ namespace iBei.Interfaces
 {
     internal interface IAuction
     {
-        Guid Id { get; }
+        Guid Id { get; set; }
         bool IsActive { get; set; }
         Guid SellerId { get; set; }
         IUser Seller { get; set; }

@@ -1,4 +1,4 @@
-﻿using iBei__aukcije_.Interfaces;
+﻿using iBei.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace iBei.Interfaces
 {
     internal interface ICategory
     {
-        Guid Id { get; }
+        Guid Id { get; set; }
         string Name { get; set; }
         Guid SectionId { get; set; }
         ISection Section { get; set; }

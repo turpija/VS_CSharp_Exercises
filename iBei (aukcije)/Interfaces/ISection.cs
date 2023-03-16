@@ -8,7 +8,7 @@ namespace iBei.Interfaces
 {
     internal interface ISection
     {
-        Guid Id { get; }
+        Guid Id { get; set; }
         string Name { get; set; }
         ICollection<ICategory> Categories { get; set; }
     }

@@ -9,10 +9,15 @@ namespace iBei.Model
 {
     internal class Item : IItem
     {
-        public Guid Id { get; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Guid CategoryId { get; set; }
         public ICategory Category { get; set; }
+
+        public Item()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }
