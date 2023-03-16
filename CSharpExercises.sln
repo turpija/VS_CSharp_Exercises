@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExercise", "ConsoleE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPbasics", "OOPbasics\OOPbasics.csproj", "{40D53AFD-3F67-4D4F-BDD7-9CFDE62AE360}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iBei", "iBei (aukcije)\iBei.csproj", "{7D2264EE-2669-4489-B3B2-4C521DD8C2CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{40D53AFD-3F67-4D4F-BDD7-9CFDE62AE360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D53AFD-3F67-4D4F-BDD7-9CFDE62AE360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D53AFD-3F67-4D4F-BDD7-9CFDE62AE360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2264EE-2669-4489-B3B2-4C521DD8C2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2264EE-2669-4489-B3B2-4C521DD8C2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2264EE-2669-4489-B3B2-4C521DD8C2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2264EE-2669-4489-B3B2-4C521DD8C2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
