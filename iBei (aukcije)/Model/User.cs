@@ -17,8 +17,10 @@ namespace iBei.Model
         public bool IsActive { get; set; }
         public ICollection<IAuction> Auctions { get; set; }
 
-        public User ()
+        public User (string username)
         {
+            Username = username;
+            Id = Guid.NewGuid();
             Auctions = new Collection<IAuction>();
         }
     }

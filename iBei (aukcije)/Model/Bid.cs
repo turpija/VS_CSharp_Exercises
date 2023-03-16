@@ -16,5 +16,12 @@ namespace iBei.Model
         public IAuction Auction { get; }
         public double BidPrice { get; set; }
         public DateTime BidTime { get; set; }
+
+        public Bid(User user, Auction auction)
+        {
+            User = user;
+            Auction = auction;
+            Id = Guid.NewGuid();
+        }
     }
 }

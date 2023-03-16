@@ -10,7 +10,7 @@ namespace iBei.Interfaces
     {
         Guid Id { get; }
         Guid UserId { get; set; }
-        IUser User { get; }
+        IUser User { get; set; }
         Guid AuctionId { get; set; }
         IAuction Auction { get; }
         double BidPrice { get; set; }

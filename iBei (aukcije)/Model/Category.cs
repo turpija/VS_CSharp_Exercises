@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace iBei.Model
 {
@@ -16,8 +17,11 @@ namespace iBei.Model
         public ISection Section { get; set; }
         public ICollection<IItem> Items { get; set; }
 
-        public Category()
+        public Category(string name, Section section)
         {
+            Name = name;
+            Section = section;
+            Id = Guid.NewGuid();
             Items = new Collection<IItem>();
         }
     }

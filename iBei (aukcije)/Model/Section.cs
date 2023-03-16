@@ -14,8 +14,10 @@ namespace iBei.Model
         public string Name { get; set; }
         public ICollection<ICategory> Categories { get; set; }
 
-        public Section()
+        public Section(string name)
         {
+            Name = name;
+            Id = Guid.NewGuid();
             Categories = new Collection<ICategory>();
         }
     }
