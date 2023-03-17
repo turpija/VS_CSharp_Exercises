@@ -1,5 +1,6 @@
 ﻿using iBei.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -23,9 +24,5 @@ namespace iBei.Model
             Bids = new Collection<Bid>();
         }
 
-        public void GetBids()
-        {
-
-        }
     }
 }

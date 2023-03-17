@@ -76,20 +76,18 @@ namespace iBei
             // get auctions ...
             foreach (var aukcija in darko.Auctions)
             {
-                Console.WriteLine("darkove aukcije: {0}", aukcija.Item.Name);
-            }
-
-
-            Console.WriteLine("HUAWEI AUKCIJA details");
-            foreach (var item in aukcijaHuawei.Bids)
-            {
-                Console.Write("item: {0}", item.Auction.Item.Name);
-                Console.Write(", bid price: {0} ", item.BidPrice);
-                Console.Write(", bidder: {0}", item.User.Username);
-                Console.Write(", at time: {0}", item.BidTime);
                 Console.WriteLine("");
-            }
+                Console.WriteLine("AUKCIJA: {0}", aukcija.Id, aukcija.Item.Name);
+                foreach (var item in aukcija.Bids)
+                {
+                    Console.Write("-  item: {0}", item.Auction.Item.Name);
+                    Console.Write(", bid price: {0} ", item.BidPrice);
+                    Console.Write(", bidder: {0}", item.User.Username);
+                    Console.Write(", at time: {0}", item.BidTime);
+                    Console.WriteLine("");
+                }
 
+            }
         }
     }
 }

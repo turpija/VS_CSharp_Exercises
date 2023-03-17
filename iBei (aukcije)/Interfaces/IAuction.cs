@@ -1,5 +1,7 @@
-﻿using System;
+﻿using iBei.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,8 @@ namespace iBei.Interfaces
         IUser Seller { get; set; }
         DateTime EndTime { get; set; }
         IItem Item { get; set; }
+        ICollection<Bid> Bids { get; set; }
+
 
     }
 }
