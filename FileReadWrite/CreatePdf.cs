@@ -30,14 +30,16 @@ namespace FileReadWrite
 
             XRect naslovOkvir = new XRect(margin, margin, page.Width - margin * 2, page.Height*0.2 - margin * 2);
             XRect contentOkvir = new XRect(margin, margin + page.Height * .2, page.Width - margin * 2, page.Height * 0.8 - margin * 2);
-            
+            XRect contentInsideOkvir = new XRect(margin+20, margin+20 + page.Height * .2, page.Width - margin+20 * 2, page.Height * 0.8 - margin+20 * 2);
+
+
             graphics.DrawRectangle(pen, naslovOkvir);
             graphics.DrawString("Zdravo svjete !", naslovFont, XBrushes.Black, naslovOkvir, XStringFormats.Center);
             
             graphics.DrawRectangle(pen, contentOkvir);
-            graphics.DrawString(ReadFromFile(), contentFont, XBrushes.Black, contentOkvir, XStringFormat.TopLeft);
-            
-            XTextFormatter tekst = new XTextFormatter()
+
+            XTextFormatter tekst = new XTextFormatter(graphics);
+            tekst.DrawString(ReadFromFile(), contentFont, XBrushes.Black, contentInsideOkvir, XStringFormat.TopLeft);
 
             document.Save(filePath);
         }
