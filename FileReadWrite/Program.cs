@@ -13,12 +13,13 @@ namespace FileReadWrite
         static void Main(string[] args)
         {
             //read write exercise using StreamWriter & StreamReader
-            ReadWriteTekstFile rwExercise = new ReadWriteTekstFile();
-            //rwExercise.Main();
+            //new ReadWriteTekstFile();
 
             //copy anyFile with FileStream ?
-            FileCopyExercise fileCopyExercise = new FileCopyExercise();
-            fileCopyExercise.Main();
+            //new FileCopyExercise();
+
+            //create custom PDF
+            new CreatePdf();
 
         }
     }

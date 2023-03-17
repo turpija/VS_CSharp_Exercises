@@ -10,7 +10,7 @@ namespace FileReadWrite
 {
     internal class ReadWriteTekstFile
     {
-        public void Main()
+        public ReadWriteTekstFile()
         {
             string directoryPath = @"C:\Users\turpija\Documents\Temp\Vjezba";
             string fileName = "NoviTekst.txt";
@@ -51,14 +51,10 @@ namespace FileReadWrite
 
             using (StreamReader sr = new StreamReader(filePath))
             {
-                //while (sr.Peek() >= 0)
-                //{
-                //    Console.WriteLine(sr.ReadLine());
-                //}
                 Console.Write(sr.ReadToEnd());
             }
 
-            //kopiraj iz fajla pa ubaci u drugi + dodaj 
+            //kopiraj tekst iz fajla pa ubaci u drugi + dodaj 
 
             string newFilePath = Path.Combine(directoryPath, "najnoviji.txt");
 
@@ -68,7 +64,7 @@ namespace FileReadWrite
                 {
                     sw.WriteLine("-- POČETAK KOPIRANOG TEKSTA --");
 
-                    while (sr.Peek() >= 0)
+                    while (!sr.EndOfStream)
                     {
                         sw.WriteLine("-> " + sr.ReadLine());
                     }

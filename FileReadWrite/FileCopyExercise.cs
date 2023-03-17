@@ -9,7 +9,7 @@ namespace FileReadWrite
 {
     internal class FileCopyExercise
     {
-        public void Main()
+        public FileCopyExercise()
         {
 
             // get directories
@@ -24,12 +24,17 @@ namespace FileReadWrite
             //get files
             string filesPath = @"C:\Users\turpija\Documents\Temp\Vjezba";
             
-            string[] listaFiles = Directory.GetFiles(filesPath);
-            foreach (var file in listaFiles)
+            string[] fileLista = Directory.GetFiles(filesPath);
+            foreach (var file in fileLista)
             {
                 var info = new FileInfo(file);
                 Console.WriteLine($"{Path.GetFileName(file)}: {info.Length} bytes, created at: {info.CreationTime}");
             }
+
+            //copy file
+            string fileFrom = @"C:\Users\turpija\Documents\Temp\Vjezba\NoviTekst.txt";
+            string fileTo = @"C:\Users\turpija\Documents\Temp\Vjezba\NoviTekstKopija.txt";
+            File.Copy(fileFrom, fileTo,true);
         }
     }
 }
