@@ -14,8 +14,11 @@ namespace FileReadWrite
         {
             //read write exercise using StreamWriter & StreamReader
             ReadWriteTekstFile rwExercise = new ReadWriteTekstFile();
-                rwExercise.Main();
+            //rwExercise.Main();
 
+            //copy anyFile with FileStream ?
+            FileCopyExercise fileCopyExercise = new FileCopyExercise();
+            fileCopyExercise.Main();
 
         }
     }
